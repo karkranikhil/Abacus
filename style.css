@@ -32,7 +32,7 @@ body {
   .btn {
     margin: 4px 0 0 0;
     display: inline-block;
-    width: 72px;
+    width: 70px;
     height: 90px;
     line-height: 46px;
     text-align: center;
@@ -55,7 +55,7 @@ body {
   }
   
   .equals {
-    width: 148px;
+    width: 144px;
   }
   #heading{
     font-family: fantasy;
