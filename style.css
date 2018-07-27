@@ -32,7 +32,7 @@ body {
   .btn {
     margin: 4px 0 0 0;
     display: inline-block;
-    width: 72px;
+    width: 70px;
     height: 90px;
     line-height: 46px;
     text-align: center;
@@ -55,10 +55,101 @@ body {
   }
   
   .equals {
-    width: 148px;
+    width: 144px;
   }
   #heading{
     font-family: fantasy;
   }
 
+  .ad2hs-prompt {
+    display: none;
+    width: 100%;
+    line-height: 2em;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    padding: 5% 0;
+    min-height: 10%;
+    position: fixed;
+    bottom: 0;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-grow: 1;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  .ad2hs-prompt:hover {
+    box-shadow: 0 0 0 0 0.25rem;
+  }
+  
+  .ad2hs-prompt a:focus {
+    text-decoration: underline;
+  }
+  
+  .ad2hs-prompt:focus-within {
+    box-shadow: 0 0 0 0.25rem;
+  }
+  
+  .ad2hs-prompt:focus-within a:focus {
+    text-decoration: none;
+  }
+  
+  .ad2hs-prompt H1 {
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .ad2hs-prompt .btn {
+    align-self: flex-end;
+    margin-right: 5%;
+  }
+  
+  .ad2hs-prompt > * + * {
+    margin-top: 0.75rem;
+  }
+  
+  .ad2hs-prompt :last-child {
+    margin-top: auto;
+    margin-bottom: 0.75rem;
+  }
+  @keyframes bounceInUp {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    from {
+      opacity: 0;
+      transform: translate3d(0, 3000px, 0);
+    }
+    60% {
+      opacity: 1;
+      transform: translate3d(0, -20px, 0);
+    }
+    75% {
+      transform: translate3d(0, 10px, 0);
+    }
+    90% {
+      transform: translate3d(0, -5px, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .bounceInUp {
+    animation-name: bounceInUp;
+  }
+  .btn-premium {
+    background-color: rgb(255,82,82);
+    color: white;
+    width: 100%;
+    line-height: 90px;
+    font-size: 40px;
+  }
   
