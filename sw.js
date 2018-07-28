@@ -1,6 +1,7 @@
 var CACHE_NAME = 'Abacus-v1';
+var CACHE_NAME_1 = 'Abacus-v2';
 const urlsToCache = [
-  "/",
+  "./",
   "style.css",
   "index.html",
   "app.js",
@@ -25,6 +26,22 @@ self.addEventListener('install', function(event) {
         return cache.addAll(urlsToCache);
       })
   );
+});
+self.addEventListener('activate', function(event) {
+
+  var cacheWhitelist = [CACHE_NAME, CACHE_NAME_1];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  )
 });
 
 self.addEventListener('fetch', function(event) {

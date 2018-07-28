@@ -1,12 +1,11 @@
 {
   "name": "Abacus - Nik calculator",
   "short_name": "Abacus",
-  "theme_color": "#2196f3",
+  "theme_color": "#da532c",
   "background_color": "#da532c",
   "display": "standalone",
   "description": "Progressive web application demonstration",
-  "Scope": "/",
-  "start_url": "/index.html",
+  "start_url": "/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
