@@ -1,4 +1,4 @@
-# Abacus
+# Abacus - Progressive Web App based calculator
 Progressive web application demonstration using calculator
 
 ## Introduction
