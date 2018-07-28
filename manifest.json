@@ -6,7 +6,7 @@
   "display": "standalone",
   "description": "Progressive web application demonstration",
   "Scope": "/",
-  "start_url": "/index.html",
+  "start_url": "/Abacus",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
