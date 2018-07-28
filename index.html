@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="style.css">
@@ -15,49 +13,59 @@
     <title>Calculator(Abacus) using PWA</title>
 </head>
 <body>
-    <div id="container">
+<div class="container">
     <div class="calc">
-        <h3 id="heading">Abacus - PWA Calculator</h3>
-        <div class="output"></div> 
-        <div class="buttons">
-          <button class="btn equals" id="AC">AC</button>
-          <button class="btn" id="CE">CE</button>
-      
-          <button class="btn">÷</button>
-          <!--   second row   -->
-          <button class="btn" id="seven">7</button>
-          <button class="btn" id="eight">8</button>
-          <button class="btn" id="nine">9</button>
-          <button class="btn" id="multiply">×</button>
-          <!--   third row   -->
-          <button class="btn" id="">4</button>
-          <button class="btn">5</button>
-          <button class="btn">6</button>
-          <button class="btn">+</button>
-          <!--   fourth row   -->
-          <button class="btn">1</button>
-          <button class="btn">2</button>
-          <button class="btn">3</button>
-          <button class="btn">-</button>
-          <!--   fifth row   -->
-          <button class="btn">0</button>
-          <button class="btn">.</button>
-          <button class="btn equals">=</button>
+        <div class="margin-1-per">
+            <h3 id="heading">Abacus - PWA Calculator</h3>
         </div>
-      
-      </div>
-      <div class="ad2hs-prompt bounceInUp">
-            <h1>Add Abacus To Your Homescreen!</h1>
-            <div class="btn-premium">Add</div>
-          </div>
+        <div class="output"></div>
+        <div class="flex-grids">
+            <div class="btn col-6 btn-operator">AC</div>
+            <div class="btn col btn-operator">CE</div>
+            <div class="btn col btn-operator">÷</div>
+        </div>
+        <div class="flex-grids">
+            <div class="btn col btn-no">7</div>
+            <div class="btn col btn-no">8</div>
+            <div class="btn col btn-no">9</div>
+            <div class="btn col btn-operator">×</div>
+        </div>
+        <div class="flex-grids">
+            <div class="btn col btn-no">4</div>
+            <div class="btn col btn-no">5</div>
+            <div class="btn col btn-no">6</div>
+            <div class="btn col btn-operator">+</div>
+        </div>
+        <div class="flex-grids">
+            <div class="btn col btn-no">1</div>
+            <div class="btn col btn-no">2</div>
+            <div class="btn col btn-no">3</div>
+            <div class="btn col btn-operator">-</div>
+        </div>
+        <div class="flex-grids">
+            <div class="btn col btn-no">0</div>
+            <div class="btn col btn-operator">.</div>
+            <div class="btn col-6 btn-operator">=</div>
+        </div>
     </div>
-      <script src="app.js"></script>
-      <script>
-            if('serviceWorker' in navigator) {
-              navigator.serviceWorker
-                       .register('/sw.js')
-                       .then(function() { console.log("Service Worker Registered"); });
-            }
-            </script>
+    <div class="ad2hs-prompt bounceInUp">
+        <h1>Add Abacus To Your Homescreen!</h1>
+        <div class="btn-premium">Add</div>
+    </div>
+</div>
+<script src="app.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
 </body>
 </html>
