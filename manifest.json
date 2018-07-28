@@ -5,7 +5,7 @@
   "background_color": "#da532c",
   "display": "standalone",
   "description": "Progressive web application demonstration",
-  "start_url": "/Abacus",
+  "start_url": "/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
